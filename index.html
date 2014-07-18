@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="http://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+       var twitterLoginStatus = false;
+       var googleLoginStatus = false;
+       var facebookLoginStatus = false;
+       $(document).ready(function() {
+           $("body").append
+               (
+              " <img " +
+              "  style='display:none;' " +
+              "  onload='googleLoginStatus = true;' " +
+              "  onerror='googleLoginStatus = false;' " + 
+              "  src='https://plus.google.com/up/?continue=https://www.google.com/intl/en/images/logos/accounts_logo.png&type=st&gpsrc=ogpy0' " +
+              " /> " +
+              " <img " + 
+              "  style='display:none;' " +
+              "  src='https://twitter.com/login?redirect_after_login=%2Fimages%2Fspinner.gif' " + 
+              "  onload='twitterLoginStatus = true;' " +
+              "  onerror='twitterLoginStatus = false;' " + 
+              " /> " 
+              );
+              $.getScript( "https://facebook.com/turkanen" )
+              .done(function() {
+                  facebookLoginStatus = true;
+              })
+              .fail(function() {
+                  facebookLoginStatus = false;
+});
+        });
+    </script>
+
+    <title></title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+</body>
+
+</html>

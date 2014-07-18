@@ -1,4 +1,4 @@
-codesnippets
-============
+skel-www
+========
 
-Useful snippets in different languages
+This repo contains the files to begin an HTML5 webpage project.
